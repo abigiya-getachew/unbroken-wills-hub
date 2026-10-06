@@ -1,9 +1,6 @@
 name: Profile Submission
 description: Submit your profile to the Unbroken Wills directory
 title: "[Profile]: "
-labels:
-  - profile-request
-  - awaiting-review
 body:
   - type: markdown
     attributes:
