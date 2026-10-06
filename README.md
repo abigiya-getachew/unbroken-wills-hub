@@ -1,24 +1,24 @@
-# Unbroken Wills Community Hub 🕊️💻
+# Unbroken Wills
 
 *"Broken wings, unbroken wills."*
 
-Welcome to the Unbroken Wills Community Hub! This is an open-source project dedicated to building a supportive network and resource directory for women in technology, accounting, and religious ministry, starting in Addis Ababa, Ethiopia, and expanding across Africa.
+Unbroken Wills is an open-source project created by a software engineering student in Addis Ababa, Ethiopia. It focuses on practical digital tools, shared learning resources, and a supportive community for students, developers, designers, writers, testers, and contributors.
 
-## 🌟 Our Vision
-To create a safe, encouraging, and highly functional platform where women can find mentorship, share resources, and uplift one another in both their faith and their technical careers.
+## Project Pillars
+- **Technology:** Learning, building, and sharing open-source tools for students, developers, and future technologists.
+- **Tools & Records:** Creating simple digital tools for organizing budgets, reports, logs, and everyday operational tasks.
+- **Community & Learning:** Building a respectful space where people can share knowledge, support one another, and collaborate on open-source projects.
 
-## 🛠️ Tech Stack
-We are building this platform using modern, accessible tools:
-- **Frontend:** React / Next.js (or your preferred framework)
-- **Styling:** Tailwind CSS
-- **Backend/Database:** Supabase or Firebase
+## Tech Stack
+- **Framework:** Next.js with React
+- **Styling:** Tailwind CSS v4
+- **Icons:** Lucide
 
-## 🚀 How to Run Locally
-*(We will update this once we write the code!)*
+## Run Locally
 1. Clone the repository: `git clone https://github.com/your-username/unbroken-wills-hub.git`
 2. Navigate to the folder: `cd unbroken-wills-hub`
 3. Install dependencies: `npm install`
 4. Run the app: `npm run dev`
 
-## 🤝 Join the Movement
-We welcome contributions from developers, designers, and content creators! Please read our [Contributing Guidelines](CONTRIBUTING.md) before making a pull request.
+## Contribute
+Developers, designers, writers, testers, mentors, and community builders are welcome. See the [Contributing Guidelines](CONTRIBUTING.md) before opening a pull request.

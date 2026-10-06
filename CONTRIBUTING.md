@@ -1,6 +1,6 @@
 # Contributing to Unbroken Wills
 
-Thank you for your interest in contributing! We are building this hub with humility, resilience, and a spirit of service. 
+Thank you for your interest in contributing! We are building practical tools and shared learning resources with resilience, collaboration, and care.
 
 ## How to Contribute
 1. **Fork** this repository to your own GitHub account.
