@@ -14,6 +14,7 @@ Unbroken Wills is an open-source project created by a software engineering stude
 - **Styling:** Tailwind CSS v4
 - **Icons:** Lucide
 
+
 ## Run Locally
 1. Clone the repository: `git clone https://github.com/your-username/unbroken-wills-hub.git`
 2. Navigate to the folder: `cd unbroken-wills-hub`

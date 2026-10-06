@@ -7,6 +7,7 @@ export interface Profile {
   location: string;
   bio: string;
   skills: string[];
+  publicLink?: string;
 }
 
 export const profiles: Profile[] = [

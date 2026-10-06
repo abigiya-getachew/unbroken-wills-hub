@@ -2,85 +2,8 @@
 
 import { useMemo, useState } from "react";
 import { Search, SlidersHorizontal, X } from "lucide-react";
-import ProfileCard, {
-  type Field,
-} from "@/app/components/ProfileCard";
-
-interface Profile {
-  name: string;
-  role: string;
-  field: Field;
-  location: string;
-  bio: string;
-  skills: string[];
-}
-
-const profiles: Profile[] = [
-  {
-    name: "Selam Tesfaye",
-    role: "Software Engineering Student",
-    field: "Technology",
-    location: "Addis Ababa, Ethiopia",
-    bio: "Passionate about building accessible web applications and encouraging other students to learn open-source development.",
-    skills: ["React", "TypeScript", "Open Source", "UI Design"],
-  },
-  {
-    name: "Meron Alemu",
-    role: "Accounting Student interested in tools",
-    field: "Tools",
-    location: "Addis Ababa, Ethiopia",
-    bio: "Exploring ways digital tools can make budgeting, bookkeeping, and everyday records easier to manage.",
-    skills: ["Bookkeeping", "Budgeting", "Spreadsheets", "Record Keeping"],
-  },
-  {
-    name: "Hana Girma",
-    role: "Designer",
-    field: "Community",
-    location: "Addis Ababa, Ethiopia",
-    bio: "Designs clear, accessible interfaces and enjoys collaborating with open-source teams.",
-    skills: ["Figma", "UI Design", "Accessibility", "Prototyping"],
-  },
-  {
-    name: "Liya Bekele",
-    role: "Writer",
-    field: "Community",
-    location: "Ethiopia",
-    bio: "Turns technical topics into helpful guides, tutorials, and documentation for learners.",
-    skills: ["Technical Writing", "Documentation", "Editing", "Learning Resources"],
-  },
-  {
-    name: "Ruth Mekonnen",
-    role: "Tester",
-    field: "Technology",
-    location: "Addis Ababa, Ethiopia",
-    bio: "Tests web experiences and reports clear, reproducible issues to help improve project quality.",
-    skills: ["Quality Assurance", "Bug Reports", "Accessibility", "Web Testing"],
-  },
-  {
-    name: "Bethlehem Assefa",
-    role: "Community Volunteer",
-    field: "Community",
-    location: "Addis Ababa, Ethiopia",
-    bio: "Welcomes new contributors, helps coordinate community activities, and supports shared learning.",
-    skills: ["Community Support", "Event Planning", "Communication", "Teamwork"],
-  },
-  {
-    name: "Dawit Kebede",
-    role: "Mentor",
-    field: "Technology",
-    location: "Addis Ababa, Ethiopia",
-    bio: "Supports students as they build practical software skills and find their first open-source projects.",
-    skills: ["Mentorship", "JavaScript", "Career Guidance", "Git"],
-  },
-  {
-    name: "Mekdes Tadesse",
-    role: "Open Source Contributor",
-    field: "Tools",
-    location: "Ethiopia",
-    bio: "Contributes ideas and improvements for useful digital tools and community resources.",
-    skills: ["Open Source", "Research", "Spreadsheets", "Collaboration"],
-  },
-];
+import { profiles, type Field } from "@/app/data/profiles";
+import ProfileCard from "@/app/components/ProfileCard";
 
 const filterOptions: Array<"All" | Field> = [
   "All",

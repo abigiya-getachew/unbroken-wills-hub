@@ -9,6 +9,7 @@ interface ProfileCardProps {
   location: string;
   bio: string;
   skills: string[];
+  publicLink?: string;
 }
 
 const fieldBadge: Record<Field, string> = {
@@ -30,6 +31,7 @@ export default function ProfileCard({
   location,
   bio,
   skills,
+  publicLink,
 }: ProfileCardProps) {
   const initials = name
     .split(" ")
@@ -90,13 +92,25 @@ export default function ProfileCard({
           Contact
         </button>
 
-        <button
-          type="button"
-          className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-orange-200 text-orange-500 text-sm font-semibold hover:bg-orange-50 transition"
-        >
-          <Link2 className="w-4 h-4" />
-          Profile
-        </button>
+        {publicLink ? (
+          <a
+            href={publicLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-orange-200 text-orange-500 text-sm font-semibold hover:bg-orange-50 transition"
+          >
+            <Link2 className="w-4 h-4" />
+            Profile
+          </a>
+        ) : (
+          <button
+            type="button"
+            className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-orange-200 text-orange-500 text-sm font-semibold hover:bg-orange-50 transition"
+          >
+            <Link2 className="w-4 h-4" />
+            Profile
+          </button>
+        )}
       </div>
     </article>
   );
