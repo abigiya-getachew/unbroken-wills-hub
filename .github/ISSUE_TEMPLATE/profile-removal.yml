@@ -1,0 +1,55 @@
+name: Profile Removal or Edit Request
+description: Request removal or editing of a published profile
+title: "[Profile Edit]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form if you want to remove or edit a profile that has been published in the directory.
+
+  - type: input
+    id: display-name
+    attributes:
+      label: Display Name
+      description: The name used in the published profile.
+      placeholder: e.g. Selam Tesfaye
+    validations:
+      required: true
+
+  - type: input
+    id: original-issue
+    attributes:
+      label: Original Profile Issue Number
+      description: If known, add the issue number used for the original profile submission. Example: 12
+      placeholder: e.g. 12
+    validations:
+      required: false
+
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Request Type
+      options:
+        - Remove my profile
+        - Edit my profile
+        - Update my public link
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Explain what should be removed or changed.
+      placeholder: e.g. Please update my role and remove my old GitHub link.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I confirm I am requesting this change for my own profile or I have permission to make this request.
+          required: true
