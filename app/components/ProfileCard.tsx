@@ -1,6 +1,5 @@
-import { Link2, Mail, MapPin } from "lucide-react";
-
-export type Field = "Technology" | "Tools" | "Community";
+import { Link2, MapPin, Sparkles, Target } from "lucide-react";
+import type { Field } from "@/app/data/profiles";
 
 interface ProfileCardProps {
   name: string;
@@ -9,6 +8,8 @@ interface ProfileCardProps {
   location: string;
   bio: string;
   skills: string[];
+  offers?: string[];
+  needs?: string[];
   publicLink?: string;
 }
 
@@ -31,6 +32,8 @@ export default function ProfileCard({
   location,
   bio,
   skills,
+  offers,
+  needs,
   publicLink,
 }: ProfileCardProps) {
   const initials = name
@@ -72,7 +75,7 @@ export default function ProfileCard({
         {location}
       </div>
 
-      <div className="flex flex-wrap gap-2 mb-6">
+      <div className="flex flex-wrap gap-2 mb-5">
         {skills.map((skill) => (
           <span
             key={skill}
@@ -83,35 +86,49 @@ export default function ProfileCard({
         ))}
       </div>
 
-      <div className="flex gap-3">
-        <button
-          type="button"
-          className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-violet-600 text-white text-sm font-semibold hover:bg-violet-700 transition"
-        >
-          <Mail className="w-4 h-4" />
-          Contact
-        </button>
+      {(offers && offers.length > 0) || (needs && needs.length > 0) ? (
+        <div className="grid gap-3 mb-6">
+          {offers && offers.length > 0 && (
+            <div className="rounded-2xl bg-orange-50 border border-orange-100 p-4">
+              <div className="flex items-center gap-2 mb-2 text-orange-600 text-sm font-semibold">
+                <Sparkles className="w-4 h-4" />
+                Can Offer
+              </div>
+              <p className="text-sm text-violet-700/75">
+                {offers.join(", ")}
+              </p>
+            </div>
+          )}
 
-        {publicLink ? (
-          <a
-            href={publicLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-orange-200 text-orange-500 text-sm font-semibold hover:bg-orange-50 transition"
-          >
-            <Link2 className="w-4 h-4" />
-            Profile
-          </a>
-        ) : (
-          <button
-            type="button"
-            className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-orange-200 text-orange-500 text-sm font-semibold hover:bg-orange-50 transition"
-          >
-            <Link2 className="w-4 h-4" />
-            Profile
-          </button>
-        )}
-      </div>
+          {needs && needs.length > 0 && (
+            <div className="rounded-2xl bg-violet-50 border border-violet-100 p-4">
+              <div className="flex items-center gap-2 mb-2 text-violet-600 text-sm font-semibold">
+                <Target className="w-4 h-4" />
+                Looking For
+              </div>
+              <p className="text-sm text-violet-700/75">
+                {needs.join(", ")}
+              </p>
+            </div>
+          )}
+        </div>
+      ) : null}
+
+      {publicLink ? (
+        <a
+          href={publicLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-violet-600 text-white text-sm font-semibold hover:bg-violet-700 transition"
+        >
+          <Link2 className="w-4 h-4" />
+          Connect
+        </a>
+      ) : (
+        <span className="w-full inline-flex items-center justify-center px-4 py-3 rounded-full bg-violet-50 text-violet-400 text-sm font-semibold border border-violet-100">
+          No public link provided
+        </span>
+      )}
     </article>
   );
 }
