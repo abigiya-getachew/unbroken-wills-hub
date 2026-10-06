@@ -1,0 +1,108 @@
+name: Resource Submission
+description: Submit a helpful guide, template, checklist, code snippet, or community resource
+title: "[Resource]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for sharing a resource with the Unbroken Wills community.
+
+        Please only submit resources you created, own, or have permission to share.
+
+        Do not submit private files, copyrighted material without permission, executable files, archives, or sensitive documents.
+
+        If you have a file, you can either:
+        1. Provide a public download link, or
+        2. Attach the file in a comment after submitting this issue.
+
+  - type: input
+    id: resource-title
+    attributes:
+      label: Resource Title
+      description: Give the resource a clear name.
+      placeholder: e.g. Beginner Git and GitHub Guide
+    validations:
+      required: true
+
+  - type: dropdown
+    id: resource-category
+    attributes:
+      label: Category
+      description: Choose the closest category.
+      options:
+        - Guides
+        - Templates
+        - Code Snippets
+        - Checklists
+        - Community
+    validations:
+      required: true
+
+  - type: dropdown
+    id: resource-type
+    attributes:
+      label: Resource Type
+      description: Is this a link, file, or written note?
+      options:
+        - link
+        - file
+        - note
+    validations:
+      required: true
+
+  - type: textarea
+    id: resource-description
+    attributes:
+      label: Description
+      description: Explain what this resource helps with and who it is for.
+      placeholder: e.g. This guide helps beginners understand Git commands and GitHub pull requests.
+    validations:
+      required: true
+
+  - type: input
+    id: resource-url
+    attributes:
+      label: Public Link
+      description: If this is a link resource, paste the public URL here.
+      placeholder: e.g. https://example.com/guide
+    validations:
+      required: false
+
+  - type: textarea
+    id: resource-content
+    attributes:
+      label: Resource Content or File Details
+      description: If this is a note, paste the content here. If this is a file, describe the file and attach it in a comment after submitting.
+      placeholder: e.g. This is a CSV budget template with columns for income, expense, category, and date.
+    validations:
+      required: false
+
+  - type: input
+    id: resource-tags
+    attributes:
+      label: Tags
+      description: Separate tags with commas.
+      placeholder: e.g. Git, GitHub, beginners, open source
+    validations:
+      required: false
+
+  - type: input
+    id: submitted-by
+    attributes:
+      label: Submitted By
+      description: Name or GitHub username you want credited. Leave blank if you prefer anonymous.
+      placeholder: e.g. Selam Tesfaye
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: permissions
+    attributes:
+      label: Permission and Safety
+      options:
+        - label: I confirm I created this resource, own it, or have permission to share it.
+          required: true
+        - label: I confirm this resource does not contain private, harmful, copyrighted, or sensitive material.
+          required: true
+        - label: I understand a maintainer will review this submission before it is published.
+          required: true
