@@ -1,5 +1,5 @@
 name: Profile Submission
-description: Submit your profile to the Unbroken Wills directory
+description: Submit your real profile to the Unbroken Wills directory
 title: "[Profile]: "
 body:
   - type: markdown
@@ -7,15 +7,17 @@ body:
       value: |
         Thank you for submitting a profile to the Unbroken Wills directory.
 
-        Please only submit your own profile or a profile you have permission to share.
+        Please only submit your own profile or a profile you have clear permission to share.
 
-        Do not include private information such as phone numbers, home addresses, ID numbers, or passwords.
+        Do not include private information such as phone numbers, home addresses, ID numbers, passwords, or personal email addresses.
+
+        Use a general location only, such as "Addis Ababa, Ethiopia".
 
   - type: input
-    id: full-name
+    id: display-name
     attributes:
-      label: Full Name
-      description: The name you want displayed in the directory.
+      label: Display Name
+      description: The name you want shown publicly in the directory.
       placeholder: e.g. Selam Tesfaye
     validations:
       required: true
@@ -45,7 +47,7 @@ body:
     id: location
     attributes:
       label: Location
-      description: City, country, or region. You do not need to give an exact address.
+      description: City and country only. Do not provide a home address.
       placeholder: e.g. Addis Ababa, Ethiopia
     validations:
       required: true
@@ -54,8 +56,8 @@ body:
     id: bio
     attributes:
       label: Short Bio
-      description: One or two sentences about you and what you want to contribute.
-      placeholder: e.g. Interested in open-source web development and practical digital tools.
+      description: One or two sentences about you, what you are learning, and how you want to contribute.
+      placeholder: e.g. I am interested in open-source web development and building practical digital tools for community use.
     validations:
       required: true
 
@@ -67,6 +69,24 @@ body:
       placeholder: e.g. Next.js, TypeScript, Tailwind CSS, Git
     validations:
       required: true
+
+  - type: input
+    id: offers
+    attributes:
+      label: What can you offer?
+      description: Separate items with commas. This helps others know how you can contribute.
+      placeholder: e.g. code review, beginner mentoring, spreadsheet help, event planning
+    validations:
+      required: false
+
+  - type: input
+    id: needs
+    attributes:
+      label: What are you looking for?
+      description: Separate items with commas. This helps the community support you.
+      placeholder: e.g. project collaboration, feedback, learning resources, internship advice
+    validations:
+      required: false
 
   - type: input
     id: public-link
@@ -83,7 +103,9 @@ body:
       label: Consent
       description: Please confirm the following before submitting.
       options:
-        - label: I confirm this is my profile or I have permission to share it.
+        - label: I confirm this is my profile or I have clear permission to share it.
           required: true
         - label: I understand this profile may be published in the open-source directory.
+          required: true
+        - label: I understand I can request removal or edits later by opening a removal issue.
           required: true
