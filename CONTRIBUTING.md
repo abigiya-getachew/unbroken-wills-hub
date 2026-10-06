@@ -12,17 +12,38 @@ Thank you for your interest in contributing! We are building practical tools and
 ## Good First Issues
 If you are new to open source, look for issues labeled `good first issue` in our Issues tab. These are small, manageable tasks perfect for beginners!
 
-## Submitting a Directory Profile
+## Directory Profile Process
 
-If you want to add yourself to the directory, please use the **Profile Submission** issue template.
+The directory is intended to contain real profiles from people who have submitted their details and confirmed consent.
 
-1. Go to **Issues**
-2. Click **New issue**
-3. Select **Profile Submission**
-4. Fill the form
-5. Wait for review
+### To submit a profile
 
-Do not open a pull request with someone else’s personal information unless you have permission.
+1. Go to **Issues**.
+2. Click **New issue**.
+3. Choose **Profile Submission**.
+4. Fill in your public-safe details.
+5. Confirm consent.
 
-## Communication
+### What not to submit
+
+Please do not submit:
+
+- phone numbers
+- home addresses
+- ID numbers
+- private email addresses
+- passwords
+- personal documents
+- someone else's private information
+
+### Approval process
+
+Maintainers review submissions before adding profiles to:
+
+```txt
+src/data/profiles.ts
+
+```
+
+### Communication
 Please be respectful and encouraging in all discussions. We are here to build each other up.
