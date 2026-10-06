@@ -1,1 +1,92 @@
+name: Profile Submission
+description: Submit your profile to the Unbroken Wills directory
+title: "[Profile]: "
+labels:
+  - profile-request
+  - awaiting-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a profile to the Unbroken Wills directory.
 
+        Please only submit your own profile or a profile you have permission to share.
+
+        Do not include private information such as phone numbers, home addresses, ID numbers, or passwords.
+
+  - type: input
+    id: full-name
+    attributes:
+      label: Full Name
+      description: The name you want displayed in the directory.
+      placeholder: e.g. Selam Tesfaye
+    validations:
+      required: true
+
+  - type: input
+    id: role
+    attributes:
+      label: Role
+      description: Your current role, title, or what you are studying.
+      placeholder: e.g. Software Engineering Student
+    validations:
+      required: true
+
+  - type: dropdown
+    id: field
+    attributes:
+      label: Field
+      description: Choose the closest category.
+      options:
+        - Technology
+        - Tools
+        - Community
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: City, country, or region. You do not need to give an exact address.
+      placeholder: e.g. Addis Ababa, Ethiopia
+    validations:
+      required: true
+
+  - type: textarea
+    id: bio
+    attributes:
+      label: Short Bio
+      description: One or two sentences about you and what you want to contribute.
+      placeholder: e.g. Interested in open-source web development and practical digital tools.
+    validations:
+      required: true
+
+  - type: input
+    id: skills
+    attributes:
+      label: Skills
+      description: Separate skills with commas.
+      placeholder: e.g. Next.js, TypeScript, Tailwind CSS, Git
+    validations:
+      required: true
+
+  - type: input
+    id: public-link
+    attributes:
+      label: Optional Public Link
+      description: Add a GitHub, LinkedIn, portfolio, or website link. Do not add private links.
+      placeholder: e.g. https://github.com/username
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent
+      description: Please confirm the following before submitting.
+      options:
+        - label: I confirm this is my profile or I have permission to share it.
+          required: true
+        - label: I understand this profile may be published in the open-source directory.
+          required: true
