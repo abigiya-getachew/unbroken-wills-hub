@@ -14,6 +14,20 @@ Unbroken Wills is an open-source project created by a software engineering stude
 - **Styling:** Tailwind CSS v4
 - **Icons:** Lucide
 
+## Directory Profiles
+
+The directory contains real profiles submitted by contributors and community members with consent.
+
+To submit a profile:
+
+1. Go to the **Issues** tab.
+2. Click **New issue**.
+3. Choose **Profile Submission**.
+4. Fill in your details.
+5. Confirm consent.
+
+To request removal or edits, use the **Profile Removal or Edit Request** template.
+
 
 ## Run Locally
 1. Clone the repository: `git clone https://github.com/your-username/unbroken-wills-hub.git`
