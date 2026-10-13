@@ -25,8 +25,11 @@
 *.pem
 
 # agents and local tooling
-/agents
-/aider-desk
+/.agents/
+/.aider-desk/
+/skills-lock.json
+/agents/
+/aider-desk/
 
 # debug
 npm-debug.log*
