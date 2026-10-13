@@ -9,8 +9,8 @@ import {
   Users,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import PageHeader from "@/app/components/PageHeader";
-import ContentCard, { type Accent } from "@/app/components/ContentCard";
+import PageHeader from "@/components/sections/PageHeader";
+import ContentCard, { type Accent } from "@/components/ui/cards/ContentCard";
 
 export const metadata: Metadata = {
   title: "Contribute",

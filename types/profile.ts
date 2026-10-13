@@ -12,5 +12,3 @@ export interface Profile {
   publicLink?: string;
   sourceIssue?: number;
 }
-
-export const profiles: Profile[] = [];

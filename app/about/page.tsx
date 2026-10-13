@@ -7,8 +7,8 @@ import {
   Sparkles,
   Users,
 } from "lucide-react";
-import PageHeader from "@/app/components/PageHeader";
-import ContentCard from "@/app/components/ContentCard";
+import PageHeader from "@/components/sections/PageHeader";
+import ContentCard from "@/components/ui/cards/ContentCard";
 
 export const metadata: Metadata = {
   title: "About",

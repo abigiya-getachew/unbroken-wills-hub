@@ -2,8 +2,10 @@
 
 import { useMemo, useState } from "react";
 import { Search, SlidersHorizontal, X } from "lucide-react";
-import { profiles, type Field } from "@/app/data/profiles";
-import ProfileCard from "@/app/components/ProfileCard";
+import { profiles } from "@/lib/data/profiles";
+import { filterBySearchAndCategory } from "@/lib/utils/filterBySearchAndCategory";
+import type { Field } from "@/types/profile";
+import ProfileCard from "@/components/ui/cards/ProfileCard";
 
 const filterOptions: Array<"All" | Field> = [
   "All",
@@ -17,26 +19,19 @@ export default function DirectoryUser() {
   const [activeField, setActiveField] = useState<"All" | Field>("All");
 
   const filteredProfiles = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
-
-    return profiles.filter((profile) => {
-      const matchesField =
-        activeField === "All" || profile.field === activeField;
-
-      const searchableText = [
-        profile.name,
-        profile.role,
-        profile.location,
-        profile.bio,
-        ...profile.skills,
-      ]
-        .join(" ")
-        .toLowerCase();
-
-      const matchesQuery =
-        normalizedQuery === "" || searchableText.includes(normalizedQuery);
-
-      return matchesField && matchesQuery;
+    return filterBySearchAndCategory({
+      items: profiles,
+      query,
+      activeCategory: activeField,
+      getCategory: (profile) => profile.field,
+      getSearchableText: (profile) =>
+        [
+          profile.name,
+          profile.role,
+          profile.location,
+          profile.bio,
+          ...profile.skills,
+        ].join(" "),
     });
   }, [query, activeField]);
 

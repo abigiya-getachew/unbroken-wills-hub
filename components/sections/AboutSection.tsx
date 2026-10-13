@@ -1,5 +1,5 @@
 import { Code, ClipboardList, Users } from 'lucide-react';
-import MissionCard from './MissionCard';
+import MissionCard from "../ui/cards/MissionCard";
 
 export default function AboutSection() {
   return (

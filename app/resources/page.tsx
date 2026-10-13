@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Plus, Sparkles } from "lucide-react";
-import PageHeader from "@/app/components/PageHeader";
-import ResourcesUser from "@/app/components/ResourcesUser";
+import PageHeader from "@/components/sections/PageHeader";
+import Button from "@/components/ui/buttons/Button";
+import ResourcesUser from "@/components/ui/forms/ResourcesUser";
 
 export const metadata: Metadata = {
   title: "Resources",
@@ -38,13 +38,13 @@ export default function Resources() {
             publishing them here.
           </p>
 
-          <Link
+          <Button
             href="/contribute"
-            className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-violet-600 to-violet-700 text-white font-semibold hover:shadow-lg hover:shadow-violet-400/30 transition"
+            className="px-7 bg-linear-to-r from-violet-600 to-violet-700 hover:bg-violet-700 hover:shadow-lg hover:shadow-violet-400/30"
           >
             <Plus className="w-4 h-4" />
             Submit a Resource
-          </Link>
+          </Button>
         </div>
       </section>
     </>

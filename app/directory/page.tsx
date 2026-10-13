@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Plus, Users } from "lucide-react";
-import PageHeader from "@/app/components/PageHeader";
-import DirectoryClient from "@/app/components/DirectoryUser";
+import PageHeader from "@/components/sections/PageHeader";
+import DirectoryClient from "@/components/ui/forms/DirectoryUser";
 
 export const metadata: Metadata = {
   title: "Directory",

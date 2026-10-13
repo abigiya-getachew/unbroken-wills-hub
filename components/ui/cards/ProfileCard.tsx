@@ -1,5 +1,5 @@
 import { Link2, MapPin, Sparkles, Target } from "lucide-react";
-import type { Field } from "@/app/data/profiles";
+import type { Field } from "@/types/profile";
 
 interface ProfileCardProps {
   name: string;

@@ -2,8 +2,9 @@
 
 import { useMemo, useState } from "react";
 import { Download, ExternalLink, FileText, Search, X } from "lucide-react";
-import { resources } from "@/app/data/resources";
-import type { ResourceCategory } from "@/app/data/resources";
+import { resources } from "@/lib/data/resources";
+import { filterBySearchAndCategory } from "@/lib/utils/filterBySearchAndCategory";
+import type { ResourceCategory } from "@/types/resource";
 
 const categories: Array<"All" | ResourceCategory> = [
   "All",
@@ -19,26 +20,19 @@ export default function ResourcesClient() {
   const [activeCategory, setActiveCategory] = useState<"All" | ResourceCategory>("All");
 
   const filteredResources = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
-
-    return resources.filter((resource) => {
-      const matchesCategory =
-        activeCategory === "All" || resource.category === activeCategory;
-
-      const searchableText = [
-        resource.title,
-        resource.description,
-        resource.category,
-        ...(resource.tags ?? []),
-        resource.submittedBy ?? "",
-      ]
-        .join(" ")
-        .toLowerCase();
-
-      const matchesQuery =
-        normalizedQuery === "" || searchableText.includes(normalizedQuery);
-
-      return matchesCategory && matchesQuery;
+    return filterBySearchAndCategory({
+      items: resources,
+      query,
+      activeCategory,
+      getCategory: (resource) => resource.category,
+      getSearchableText: (resource) =>
+        [
+          resource.title,
+          resource.description,
+          resource.category,
+          ...(resource.tags ?? []),
+          resource.submittedBy ?? "",
+        ].join(" "),
     });
   }, [query, activeCategory]);
 

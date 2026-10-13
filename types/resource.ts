@@ -19,5 +19,3 @@ export interface Resource {
   submittedBy?: string;
   licenseNote?: string;
 }
-
-export const resources: Resource[] = [];

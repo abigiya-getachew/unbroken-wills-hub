@@ -24,6 +24,10 @@
 .DS_Store
 *.pem
 
+# agents and local tooling
+/agents
+/aider-desk
+
 # debug
 npm-debug.log*
 yarn-debug.log*
