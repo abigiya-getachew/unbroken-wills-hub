@@ -81,6 +81,15 @@ Have an idea or want to help? Browse [open issues](https://github.com/abigiya-ge
 
 There are many ways to help: developers can contribute code; designers can improve usability and accessibility; writers can create documentation and learning resources; testers can report bugs; and mentors can help newcomers get started. Share a profile or resource using the steps above, or read the [Contributing Guidelines](CONTRIBUTING.md) to make a code contribution.
 
+## 💬 Join the Discussion
+Have ideas, questions, or just want to say hi? 
+→ [Start a conversation in Discussions](https://github.com/abigiya-getachew/unbroken-wills-hub/discussions)
+
+- 👋 Introduce yourself
+- 💡 Share ideas & feedback
+- ❓ Ask for help or clarification
+- 🤝 Connect with fellow contributors
+
 ## Maintainer and Contact
 
 This project is maintained by [Abigiya Getachew](https://github.com/abigiya-getachew). For a direct contact, visit the maintainer's [GitHub profile](https://github.com/abigiya-getachew); for project questions, ideas, or contribution help, [open an issue](https://github.com/abigiya-getachew/unbroken-wills-hub/issues).
