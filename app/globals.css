@@ -19,7 +19,6 @@ body {
   font-family: var(--font-serif);
 }
 
-/* Violet-to-peach gradient for brand accents. */
 .brand-gradient-text {
   background: linear-gradient(to right, var(--color-primary), var(--color-accent));
   -webkit-background-clip: text;

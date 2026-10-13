@@ -44,10 +44,8 @@ export default function DirectoryUser() {
 
   return (
     <section className="px-6 pb-12 max-w-6xl mx-auto">
-      {/* Search and Filter Controls */}
       <div className="bg-white border border-violet-100 rounded-3xl p-6 shadow-sm mb-10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-          {/* Search Input */}
           <div className="relative w-full lg:max-w-md">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-violet-400" />
             <input
@@ -71,7 +69,6 @@ export default function DirectoryUser() {
             )}
           </div>
 
-          {/* Field Filters */}
           <div className="flex flex-wrap items-center gap-3">
             <div className="inline-flex items-center gap-2 text-sm font-semibold text-violet-500">
               <SlidersHorizontal className="w-4 h-4" />
@@ -99,7 +96,6 @@ export default function DirectoryUser() {
           </div>
         </div>
 
-        {/* Results Count and Clear Button */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6 pt-6 border-t border-violet-100">
           <p className="text-sm text-violet-600/75">
             Showing{" "}
@@ -140,7 +136,6 @@ export default function DirectoryUser() {
         </div>
       </div>
 
-      {/* Profile Grid */}
       {filteredProfiles.length > 0 ? (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProfiles.map((profile) => (
