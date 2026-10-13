@@ -1,0 +1,22 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions / Community Chat
+    url: https://github.com/abigiya-getachew/unbroken-wills-hub/discussions
+    about: General questions, ideas, and community conversations
+
+issue_templates:
+  - name: 👤 Profile Submission
+    description: Add yourself to the community directory
+    file: ./profile-submission.yml
+  - name: ✏️ Profile Removal
+    description: Request to remove your profile
+    file: ./profile-removal.yml
+  - name: 📚 Resource Submission
+    description: Share a learning tool or guide
+    file: ./resource-submission.yml
+  - name: 🐛 Bug Report
+    description: Report something broken
+    file: ./bug-report.yml
+  - name: 💡 Feature Request
+    description: Suggest an improvement
+    file: ./feature-request.yml
