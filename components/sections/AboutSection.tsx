@@ -3,11 +3,11 @@ import MissionCard from "../ui/cards/MissionCard";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="px-8 py-24 bg-white">
+    <section id="about" className="bg-white px-6 py-20 sm:px-8 sm:py-24">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-widest text-gray-500 mb-3">Our Pillars</p>
-          <h3 className="text-4xl md:text-5xl font-serif font-bold text-gray-900">
+        <div className="mb-14 text-center sm:mb-16">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-orange-700 sm:text-sm">Our Pillars</p>
+          <h3 className="font-serif text-3xl font-bold tracking-tight text-stone-950 sm:text-4xl md:text-5xl">
             Empowering Through Community
           </h3>
         </div>

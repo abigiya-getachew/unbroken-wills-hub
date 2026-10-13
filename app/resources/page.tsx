@@ -24,15 +24,15 @@ export default function Resources() {
 
       <section className="px-6 py-16 bg-white/60">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-violet-100 text-violet-600 mb-6">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-600 mb-6">
             <Sparkles className="w-8 h-8" />
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-indigo-950 mb-5">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-950 mb-5">
             Have Something Helpful to Share?
           </h2>
 
-          <p className="text-violet-700/75 leading-relaxed mb-8">
+          <p className="text-emerald-700/75 leading-relaxed mb-8">
             You can submit a guide, template, checklist, code snippet, or community
             resource through GitHub. Maintainers will review submissions before
             publishing them here.
@@ -40,7 +40,7 @@ export default function Resources() {
 
           <Button
             href="/contribute"
-            className="px-7 bg-linear-to-r from-violet-600 to-violet-700 hover:bg-violet-700 hover:shadow-lg hover:shadow-violet-400/30"
+            className="px-7 bg-linear-to-r from-emerald-600 to-emerald-700 hover:bg-emerald-700 hover:shadow-lg hover:shadow-emerald-400/30"
           >
             <Plus className="w-4 h-4" />
             Submit a Resource

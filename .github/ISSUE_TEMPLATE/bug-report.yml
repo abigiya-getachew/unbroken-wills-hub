@@ -1,0 +1,54 @@
+name: Bug Report
+description: Report a problem with the site
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report a problem you encountered. Do not include passwords, private information, or security-sensitive details.
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do before the problem occurred?
+      placeholder: |
+        1. Go to ...
+        2. Select ...
+        3. See the problem
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead?
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device (optional)
+      description: Include browser/device details if they may help reproduce the problem.
+      placeholder: e.g. Firefox on Android
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots (optional)
+      description: Drag and drop screenshots here if they help explain the issue. Remove personal information first.
+    validations:
+      required: false

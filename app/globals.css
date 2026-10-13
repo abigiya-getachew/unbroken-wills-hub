@@ -1,12 +1,38 @@
 @import "tailwindcss";
 
+@theme {
+  --color-emerald-50: #f1f6f1;
+  --color-emerald-100: #e2ece3;
+  --color-emerald-200: #c9ddcc;
+  --color-emerald-300: #a4c6aa;
+  --color-emerald-400: #567d5e;
+  --color-emerald-500: #41724f;
+  --color-emerald-600: #39734f;
+  --color-emerald-700: #2c5c40;
+  --color-emerald-800: #244a35;
+  --color-emerald-900: #1e3d2d;
+  --color-emerald-950: #172f24;
+
+  --color-orange-50: #fcf4ee;
+  --color-orange-100: #f7e7da;
+  --color-orange-200: #edcfb8;
+  --color-orange-300: #dfad89;
+  --color-orange-400: #ce8b64;
+  --color-orange-500: #a85b39;
+  --color-orange-600: #91492f;
+  --color-orange-700: #8b482f;
+  --color-orange-800: #713c2c;
+  --color-orange-900: #5d3428;
+  --color-orange-950: #331911;
+}
+
 :root {
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
-  --color-primary: #7c3aed;
-  --color-accent: #fb923c;
-  --color-background: #f5f3ff;
-  --color-text: #312e81;
+  --color-primary: #39734f;
+  --color-accent: #a85b39;
+  --color-background: #faf9f6;
+  --color-text: #292d29;
 }
 
 body {
@@ -15,12 +41,27 @@ body {
   color: var(--color-text);
 }
 
+::selection {
+  background: #c9ddcc;
+  color: #172f24;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid #4d8962;
+  outline-offset: 3px;
+}
+
 .font-serif {
   font-family: var(--font-serif);
 }
 
 .brand-gradient-text {
-  background: linear-gradient(to right, var(--color-primary), var(--color-accent));
+  background: linear-gradient(110deg, var(--color-primary) 12%, var(--color-accent) 94%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

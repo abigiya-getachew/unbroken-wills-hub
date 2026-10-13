@@ -1,24 +1,18 @@
 name: Resource Submission
-description: Submit a helpful guide, template, checklist, code snippet, or community resource
+description: Share a learning resource, guide, template, or tool
 title: "[Resource]: "
+labels: ["resource", "community"]
+assignees: abigiya-getachew
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for sharing a resource with the Unbroken Wills community.
-
-        Please only submit resources you created, own, or have permission to share.
-
-        Do not submit private files, copyrighted material without permission, executable files, archives, or sensitive documents.
-
-        If you have a file, you can either:
-        1. Provide a public download link, or
-        2. Attach the file in a comment after submitting this issue.
+        Submit resources you created or have permission to share. Do not include private or sensitive material, executables, or archives. For files, add a public link or attach the file in a comment after submitting.
 
   - type: input
     id: resource-title
     attributes:
-      label: Resource Title
+      label: Title
       description: Give the resource a clear name.
       placeholder: e.g. Beginner Git and GitHub Guide
     validations:
@@ -30,11 +24,14 @@ body:
       label: Category
       description: Choose the closest category.
       options:
+        - Learning
         - Guides
+        - Tools
         - Templates
         - Code Snippets
         - Checklists
         - Community
+        - Other
     validations:
       required: true
 
@@ -42,7 +39,7 @@ body:
     id: resource-type
     attributes:
       label: Resource Type
-      description: Is this a link, file, or written note?
+      description: Choose the closest match.
       options:
         - link
         - file
@@ -53,8 +50,8 @@ body:
   - type: textarea
     id: resource-description
     attributes:
-      label: Description
-      description: Explain what this resource helps with and who it is for.
+      label: Short description
+      description: What does this help with, and who is it for?
       placeholder: e.g. This guide helps beginners understand Git commands and GitHub pull requests.
     validations:
       required: true
@@ -62,8 +59,8 @@ body:
   - type: input
     id: resource-url
     attributes:
-      label: Public Link
-      description: If this is a link resource, paste the public URL here.
+      label: Link (optional)
+      description: Add a public link if applicable.
       placeholder: e.g. https://example.com/guide
     validations:
       required: false
@@ -71,8 +68,8 @@ body:
   - type: textarea
     id: resource-content
     attributes:
-      label: Resource Content or File Details
-      description: If this is a note, paste the content here. If this is a file, describe the file and attach it in a comment after submitting.
+      label: Content or file details (optional)
+      description: For a note, include its content. For a file, describe it here and attach it in a comment.
       placeholder: e.g. This is a CSV budget template with columns for income, expense, category, and date.
     validations:
       required: false
@@ -89,8 +86,8 @@ body:
   - type: input
     id: submitted-by
     attributes:
-      label: Submitted By
-      description: Name or GitHub username you want credited. Leave blank if you prefer anonymous.
+      label: Credit (optional)
+      description: Name or GitHub username; leave blank to submit anonymously.
       placeholder: e.g. Selam Tesfaye
     validations:
       required: false
@@ -98,11 +95,12 @@ body:
   - type: checkboxes
     id: permissions
     attributes:
-      label: Permission and Safety
+      label: Confirmation
+      description: All confirmations are required.
       options:
-        - label: I confirm I created this resource, own it, or have permission to share it.
+        - label: I created this resource or have permission to share it.
           required: true
-        - label: I confirm this resource does not contain private, harmful, copyrighted, or sensitive material.
+        - label: This resource is free to access or open source, and contains no private or sensitive information.
           required: true
-        - label: I understand a maintainer will review this submission before it is published.
+        - label: I understand a maintainer will review it before publication.
           required: true

@@ -1,17 +1,19 @@
 name: Profile Removal or Edit Request
-description: Request removal or editing of a published profile
-title: "[Profile Edit]: "
+description: Request an edit to or removal of your published profile
+title: "[Profile Request]: "
+labels: ["profile", "community"]
+assignees: abigiya-getachew
 body:
   - type: markdown
     attributes:
       value: |
-        Use this form if you want to remove or edit a profile that has been published in the directory.
+        Use this form to edit or remove your published directory profile. Do not include private or sensitive information.
 
   - type: input
     id: display-name
     attributes:
-      label: Display Name
-      description: The name used in the published profile.
+      label: Name as listed
+      description: The name shown in your published profile.
       placeholder: e.g. Selam Tesfaye
     validations:
       required: true
@@ -20,7 +22,7 @@ body:
     id: original-issue
     attributes:
       label: Original Profile Issue Number
-      description: If known, add the issue number used for the original profile submission. Example: 12
+      description: "If known, add the issue number used for the original profile submission. Example: 12"
       placeholder: e.g. 12
     validations:
       required: false
@@ -28,28 +30,26 @@ body:
   - type: dropdown
     id: request-type
     attributes:
-      label: Request Type
+      label: What do you need?
       options:
-        - Remove my profile
         - Edit my profile
-        - Update my public link
-        - Other
+        - Remove my profile
     validations:
       required: true
 
   - type: textarea
     id: details
     attributes:
-      label: Details
-      description: Explain what should be removed or changed.
-      placeholder: e.g. Please update my role and remove my old GitHub link.
+      label: Requested changes
+      description: For removal, you can write "Please remove my profile."
+      placeholder: e.g. Please update my role and remove my old link.
     validations:
       required: true
 
   - type: checkboxes
     id: confirmation
     attributes:
-      label: Confirmation
+      label: Verification
       options:
-        - label: I confirm I am requesting this change for my own profile or I have permission to make this request.
+        - label: This is my profile, or I am authorized to request this change.
           required: true

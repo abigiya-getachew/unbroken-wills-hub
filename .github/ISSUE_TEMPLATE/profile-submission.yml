@@ -1,23 +1,19 @@
 name: Profile Submission
-description: Submit your real profile to the Unbroken Wills directory
+description: Submit your profile to the Unbroken Wills directory
 title: "[Profile]: "
+labels: ["profile", "community", "new-entry"]
+assignees: abigiya-getachew
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for submitting a profile to the Unbroken Wills directory.
-
-        Please only submit your own profile or a profile you have clear permission to share.
-
-        Do not include private information such as phone numbers, home addresses, ID numbers, passwords, or personal email addresses.
-
-        Use a general location only, such as "Addis Ababa, Ethiopia".
+        Share only information you are comfortable making public. Use a city and country, not a street address. Do not include phone numbers, private email addresses, ID numbers, passwords, or personal documents.
 
   - type: input
     id: display-name
     attributes:
-      label: Display Name
-      description: The name you want shown publicly in the directory.
+      label: Name to display
+      description: The name you want shown publicly.
       placeholder: e.g. Selam Tesfaye
     validations:
       required: true
@@ -25,8 +21,8 @@ body:
   - type: input
     id: role
     attributes:
-      label: Role
-      description: Your current role, title, or what you are studying.
+      label: Role or field of study
+      description: Your role, title, or what you are studying.
       placeholder: e.g. Software Engineering Student
     validations:
       required: true
@@ -35,7 +31,7 @@ body:
     id: field
     attributes:
       label: Field
-      description: Choose the closest category.
+      description: Choose the closest category for your profile.
       options:
         - Technology
         - Tools
@@ -55,8 +51,8 @@ body:
   - type: textarea
     id: bio
     attributes:
-      label: Short Bio
-      description: One or two sentences about you, what you are learning, and how you want to contribute.
+      label: Short bio
+      description: One or two sentences about you and how you want to contribute.
       placeholder: e.g. I am interested in open-source web development and building practical digital tools for community use.
     validations:
       required: true
@@ -73,8 +69,8 @@ body:
   - type: input
     id: offers
     attributes:
-      label: What can you offer?
-      description: Separate items with commas. This helps others know how you can contribute.
+      label: What can you offer? (optional)
+      description: Separate items with commas.
       placeholder: e.g. code review, beginner mentoring, spreadsheet help, event planning
     validations:
       required: false
@@ -82,8 +78,8 @@ body:
   - type: input
     id: needs
     attributes:
-      label: What are you looking for?
-      description: Separate items with commas. This helps the community support you.
+      label: What are you looking for? (optional)
+      description: Separate items with commas.
       placeholder: e.g. project collaboration, feedback, learning resources, internship advice
     validations:
       required: false
@@ -91,8 +87,8 @@ body:
   - type: input
     id: public-link
     attributes:
-      label: Optional Public Link
-      description: Add a GitHub, LinkedIn, portfolio, or website link. Do not add private links.
+      label: Public link (optional)
+      description: GitHub, LinkedIn, portfolio, or website. Do not share private links.
       placeholder: e.g. https://github.com/username
     validations:
       required: false
@@ -101,11 +97,11 @@ body:
     id: consent
     attributes:
       label: Consent
-      description: Please confirm the following before submitting.
+      description: All confirmations are required before submitting.
       options:
-        - label: I confirm this is my profile or I have clear permission to share it.
+        - label: This is my profile, and I consent to sharing these details publicly.
           required: true
-        - label: I understand this profile may be published in the open-source directory.
+        - label: I understand my profile may be published in the public directory.
           required: true
-        - label: I understand I can request removal or edits later by opening a removal issue.
+        - label: I can request edits or removal at any time using the Profile Removal or Edit Request form.
           required: true

@@ -28,39 +28,39 @@ export default function AboutPage() {
 
       <section className="px-6 py-16 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white border border-violet-100 rounded-3xl p-8 shadow-sm">
-            <h2 className="text-3xl font-serif font-bold text-indigo-950 mb-5">
+          <div className="bg-white border border-emerald-100 rounded-3xl p-8 shadow-sm">
+            <h2 className="text-3xl font-serif font-bold text-stone-950 mb-5">
               Our Story
             </h2>
 
-            <p className="text-violet-700/75 leading-relaxed mb-4">
+            <p className="text-emerald-700/75 leading-relaxed mb-4">
               Unbroken Wills was created to support students and builders as
               they learn, solve practical problems, and build useful digital
               tools together.
             </p>
 
-            <p className="text-violet-700/75 leading-relaxed mb-4">
+            <p className="text-emerald-700/75 leading-relaxed mb-4">
               The project focuses on practical tools and shared knowledge.
               Contributors can bring their time, ideas, creativity, and skills
               to build resources that others can learn from and use.
             </p>
 
-            <p className="text-violet-700/75 leading-relaxed">
+            <p className="text-emerald-700/75 leading-relaxed">
               It is open to contributors from all backgrounds and built around
               resilience, learning, collaboration, and excellence.
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-violet-600 to-indigo-900 text-white rounded-3xl p-8 shadow-xl shadow-violet-300/30">
+          <div className="bg-gradient-to-br from-emerald-600 to-stone-900 text-white rounded-3xl p-8 shadow-xl shadow-emerald-300/30">
             <h2 className="text-3xl font-serif font-bold mb-5">Our Vision</h2>
 
-            <p className="text-violet-100/85 leading-relaxed mb-4">
+            <p className="text-emerald-100/85 leading-relaxed mb-4">
               To create a respectful, useful space where learners and
               contributors in Addis Ababa and beyond can grow their skills and
               build technology together.
             </p>
 
-            <p className="text-violet-100/85 leading-relaxed">
+            <p className="text-emerald-100/85 leading-relaxed">
               We envision a community where students can share learning
               resources, developers can build open-source tools, and
               contributors can help one another create practical solutions.
@@ -75,7 +75,7 @@ export default function AboutPage() {
             <p className="text-orange-500 uppercase tracking-widest text-sm font-semibold mb-3">
               What We Stand For
             </p>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-indigo-950">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-950">
               Our Core Values
             </h2>
           </div>
@@ -113,12 +113,12 @@ export default function AboutPage() {
       </section>
 
       <section className="px-6 py-20">
-        <div className="max-w-4xl mx-auto text-center bg-white border border-violet-100 rounded-3xl p-10 shadow-sm">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-indigo-950 mb-5">
+        <div className="max-w-4xl mx-auto text-center bg-white border border-emerald-100 rounded-3xl p-10 shadow-sm">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-950 mb-5">
             This Is More Than a Website
           </h2>
 
-          <p className="text-violet-700/75 leading-relaxed mb-8">
+          <p className="text-emerald-700/75 leading-relaxed mb-8">
             Unbroken Wills is an open-source project for people who value
             practical tools, shared learning, collaboration, and technology
             that supports communities.
@@ -127,7 +127,7 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/directory"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-violet-600 text-white font-semibold hover:bg-violet-700 transition"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition"
             >
               Explore the Directory
               <ArrowRight className="w-4 h-4" />

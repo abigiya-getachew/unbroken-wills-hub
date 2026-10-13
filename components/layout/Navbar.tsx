@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Crown } from "lucide-react";
+import { useState } from "react";
+import { Crown, Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
   const navItems = [
     { href: "/about", label: "About" },
     { href: "/directory", label: "Directory" },
@@ -14,37 +16,86 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="flex items-center justify-between px-8 py-5 bg-white/70 backdrop-blur-lg border-b border-violet-200/50 sticky top-0 z-50">
-      <Link href="/" className="group flex items-center cursor-pointer">
-        <div className="w-11 h-11 flex items-center justify-center rounded-full bg-linear-to-br from-violet-600 to-violet-800 text-white shadow-lg shadow-violet-500/20 group-hover:scale-110 transition-transform duration-300">
-          <Crown className="w-5 h-5" strokeWidth={2.5} />
+    <nav className="sticky top-0 z-50 border-b border-emerald-900/10 bg-stone-50/90 px-5 backdrop-blur-xl sm:px-8">
+      <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between">
+        <Link
+          href="/"
+          className="group flex items-center"
+          onClick={() => setMenuOpen(false)}
+        >
+          <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-800 text-white shadow-md shadow-emerald-900/15 transition-transform duration-200 group-hover:rotate-[-4deg]">
+            <Crown aria-hidden="true" className="h-5 w-5" strokeWidth={2.2} />
+          </span>
+          <span className="ml-3 whitespace-nowrap font-serif text-xl font-bold tracking-tight text-emerald-950 sm:text-2xl">
+            Unbroken Wills
+          </span>
+        </Link>
+
+        <div className="hidden items-center gap-1 md:flex">
+          {navItems.map(({ href, label }) => {
+            const isActive = pathname === href || pathname.startsWith(`${href}/`);
+
+            return (
+              <Link
+                key={href}
+                href={href}
+                aria-current={isActive ? "page" : undefined}
+                className={`rounded-full px-4 py-2 text-sm font-medium transition-colors duration-150 ${
+                  isActive
+                    ? "bg-emerald-100 text-emerald-900"
+                    : "text-stone-600 hover:bg-white hover:text-emerald-900"
+                }`}
+              >
+                {label}
+              </Link>
+            );
+          })}
         </div>
 
-        <h1 className="ml-3 whitespace-nowrap font-serif text-2xl font-bold brand-gradient-text">
-          Unbroken Wills
-        </h1>
-      </Link>
-
-      <div className="hidden md:flex gap-8 text-sm uppercase tracking-widest text-violet-400">
-        {navItems.map(({ href, label }) => {
-          const isActive = pathname === href || pathname.startsWith(`${href}/`);
-
-          return (
-            <Link
-              key={href}
-              href={href}
-              aria-current={isActive ? "page" : undefined}
-              className={`py-2 transition-colors duration-300 ${
-                isActive
-                  ? "underline decoration-2 underline-[#7c3aed] underline-offset-8"
-                  : "hover:text-violet-700"
-              }`}
-            >
-              {label}
-            </Link>
-          );
-        })}
+        <button
+          type="button"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-stone-700 transition-colors hover:bg-emerald-100 md:hidden"
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
+          aria-controls={menuOpen ? "mobile-navigation" : undefined}
+          onClick={() => setMenuOpen((isOpen) => !isOpen)}
+        >
+          {menuOpen ? (
+            <X aria-hidden="true" className="h-5 w-5" />
+          ) : (
+            <Menu aria-hidden="true" className="h-5 w-5" />
+          )}
+        </button>
       </div>
+
+      {menuOpen && (
+        <div
+          id="mobile-navigation"
+          className="absolute inset-x-0 top-full border-b border-emerald-900/10 bg-stone-50 px-5 pb-5 pt-2 shadow-lg shadow-stone-900/5 md:hidden"
+        >
+          <div className="mx-auto flex max-w-7xl flex-col gap-1">
+            {navItems.map(({ href, label }) => {
+              const isActive = pathname === href || pathname.startsWith(`${href}/`);
+
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  aria-current={isActive ? "page" : undefined}
+                  onClick={() => setMenuOpen(false)}
+                  className={`rounded-xl px-4 py-3 text-sm font-medium ${
+                    isActive
+                      ? "bg-emerald-100 text-emerald-900"
+                      : "text-stone-700 hover:bg-white"
+                  }`}
+                >
+                  {label}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

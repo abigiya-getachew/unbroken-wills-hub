@@ -1,94 +1,65 @@
 # Contributing to Unbroken Wills
 
-Thank you for your interest in contributing! We are building practical tools and shared learning resources with resilience, collaboration, and care.
-
-## How to Contribute
-1. **Fork** this repository to your own GitHub account.
-2. **Create a Branch** for your feature or fix: `git checkout -b feature/YourFeatureName`
-3. **Make your changes** and commit them with clear messages.
-4. **Push** to your branch: `git push origin feature/YourFeatureName`
-5. Open a **Pull Request (PR)** on this original repository.
+Thanks for improving Unbroken Wills with code! For profiles, resources, and other non-code contributions, follow the instructions in the [README](README.md).
 
 ## Good First Issues
-If you are new to open source, look for issues labeled `good first issue` in our Issues tab. These are small, manageable tasks perfect for beginners!
 
-## Directory Profile Process
+A **good first issue** is a small, clearly scoped task that a newcomer can complete without needing extensive project context. It should have an understandable goal, acceptance criteria, and enough pointers to help someone get started. Examples include fixing a small UI issue, improving a README section, or adding a focused test.
 
-The directory is intended to contain real profiles from people who have submitted their details and confirmed consent.
+Maintainers use the [`good first issue`](https://github.com/abigiya-getachew/unbroken-wills-hub/labels/good%20first%20issue) label for tasks that meet this bar. Issues that need broader community help but may require more context can also receive the [`help wanted`](https://github.com/abigiya-getachew/unbroken-wills-hub/labels/help%20wanted) label. If an issue is unclear, ask a question before starting; maintainers can clarify the scope or suggest a first step.
 
-### To submit a profile
+## Step-by-Step Pull Request Workflow
 
-1. Go to **Issues**.
-2. Click **New issue**.
-3. Choose **Profile Submission**.
-4. Fill in your public-safe details.
-5. Confirm consent.
+1. **Fork the repository** on GitHub using the **Fork** button.
+2. **Clone your fork** and add the original repository as `upstream`:
 
-### What not to submit
+   Replace `YOUR_GITHUB_USERNAME` with your GitHub username:
 
-Please do not submit:
+   ```bash
+   git clone https://github.com/YOUR_GITHUB_USERNAME/unbroken-wills-hub.git
+   cd unbroken-wills-hub
+   git remote add upstream https://github.com/abigiya-getachew/unbroken-wills-hub.git
+   ```
 
-- phone numbers
-- home addresses
-- ID numbers
-- private email addresses
-- passwords
-- personal documents
-- someone else's private information
+3. **Create a branch** with a short, lowercase, hyphenated name:
 
-### Approval process
+   ```bash
+   # Choose the prefix that matches your change:
+   git switch -c feature/short-description
+   # Or: git switch -c fix/short-description
+   # Or: git switch -c docs/short-description
+   ```
 
-Maintainers review submissions before adding profiles to:
+4. **Install dependencies**, make your changes, then run both checks from the repository root:
 
-```txt
-src/data/profiles.ts
+   ```bash
+   npm install
+   npm run lint
+   npm run build
+   ```
 
-```
+   Please fix any failures before opening your PR.
 
-## Contributing Resources
+5. **Review and commit your changes**, replacing the example path and message with your own:
 
-Unbroken Wills is a community hub, so contributions are not limited to directory profiles. You can also share helpful resources such as guides, templates, checklists, code snippets, and community materials.
+   ```bash
+   git status
+   git add path/to/changed-file
+   git commit -m "Describe your change"
+   ```
 
-### Option 1: Submit a resource through GitHub Issues
+6. **Push your branch** (replace the branch name if you chose a different prefix):
 
-1. Go to **Issues**.
-2. Click **New issue**.
-3. Choose **Resource Submission**.
-4. Fill in the resource details.
-5. If you have a file, either provide a public link or attach the file in a comment after submitting the issue.
-6. Wait for maintainer review.
+   ```bash
+   git push -u origin feature/short-description
+   ```
 
-### Option 2: Open a Pull Request
+7. **Open a pull request** on GitHub from your fork's branch into `abigiya-getachew/unbroken-wills-hub`'s `main` branch. Explain what changed and why, link any related issue, report the lint/build results, and add screenshots for user-facing changes.
 
-If you are comfortable with GitHub:
+### Pull request expectations
 
-1. Fork the repository.
-2. Add your resource entry to `src/data/resources.ts`.
-3. If the resource is a small approved file, add it to `public/resources/`.
-4. Open a Pull Request.
+- Keep each PR focused and reasonably sized.
+- Add or update tests when appropriate.
+- Be respectful and responsive to review feedback.
 
-### File rules
-
-Please do not submit:
-
-- executable files
-- archives unless explicitly reviewed
-- private documents
-- copyrighted material without permission
-- sensitive personal information
-- malware or harmful scripts
-
-Allowed examples:
-
-- Markdown guides
-- CSV templates
-- PDF guides after review
-- code snippets
-- checklists
-- public resource links
-
-All resources must be reviewed before publication.
-
-
-### Communication
-Please be respectful and encouraging in all discussions. We are here to build each other up.
+Maintainers aim to acknowledge PRs within **5 business days**. Complex reviews may take longer.

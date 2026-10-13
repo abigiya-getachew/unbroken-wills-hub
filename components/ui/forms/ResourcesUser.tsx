@@ -45,23 +45,23 @@ export default function ResourcesClient() {
 
   return (
     <section className="px-6 pb-16 max-w-6xl mx-auto">
-      <div className="bg-white border border-violet-100 rounded-3xl p-6 shadow-sm mb-10">
+      <div className="bg-white border border-emerald-100 rounded-3xl p-6 shadow-sm mb-10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           <div className="relative w-full lg:max-w-md">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-violet-400" />
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-emerald-400" />
             <input
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Search resources by title, tag, or description..."
-              className="w-full pl-12 pr-12 py-3 rounded-full bg-violet-50 border border-violet-100 text-indigo-950 placeholder:text-violet-400 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent transition"
+              className="w-full pl-12 pr-12 py-3 rounded-full bg-emerald-50 border border-emerald-100 text-stone-950 placeholder:text-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition"
             />
 
             {query && (
               <button
                 type="button"
                 onClick={() => setQuery("")}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-violet-400 hover:text-violet-700 transition"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-emerald-400 hover:text-emerald-700 transition"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -79,8 +79,8 @@ export default function ResourcesClient() {
                   onClick={() => setActiveCategory(category)}
                   className={
                     isActive
-                      ? "px-5 py-2 rounded-full bg-violet-600 text-white text-sm font-semibold shadow-md shadow-violet-300/30 transition"
-                      : "px-5 py-2 rounded-full bg-violet-50 border border-violet-100 text-violet-600 text-sm font-semibold hover:bg-violet-100 transition"
+                      ? "px-5 py-2 rounded-full bg-emerald-600 text-white text-sm font-semibold shadow-md shadow-emerald-300/30 transition"
+                      : "px-5 py-2 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-600 text-sm font-semibold hover:bg-emerald-100 transition"
                   }
                 >
                   {category}
@@ -90,10 +90,10 @@ export default function ResourcesClient() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6 pt-6 border-t border-violet-100">
-          <p className="text-sm text-violet-600/75">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-6 pt-6 border-t border-emerald-100">
+          <p className="text-sm text-emerald-600/75">
             Showing{" "}
-            <span className="font-bold text-indigo-950">
+            <span className="font-bold text-stone-950">
               {filteredResources.length}
             </span>{" "}
             {filteredResources.length === 1 ? "resource" : "resources"}
@@ -117,30 +117,30 @@ export default function ResourcesClient() {
           {filteredResources.map((resource) => (
             <article
               key={resource.id}
-              className="bg-white border border-violet-100 rounded-3xl p-6 hover:shadow-xl hover:shadow-violet-200/40 transition-all duration-300"
+              className="rounded-3xl border border-emerald-100 bg-white p-6 transition-[border-color,box-shadow] duration-200 hover:shadow-xl hover:shadow-emerald-200/40"
             >
               <div className="flex items-start justify-between gap-4 mb-4">
                 <div>
-                  <h3 className="text-xl font-serif font-bold text-indigo-950 mb-2">
+                  <h3 className="text-xl font-serif font-bold text-stone-950 mb-2">
                     {resource.title}
                   </h3>
-                  <p className="text-sm text-violet-600/70">
+                  <p className="text-sm text-emerald-600/70">
                     {resource.category}
                   </p>
                 </div>
 
-                <div className="w-12 h-12 rounded-2xl bg-violet-100 flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center shrink-0">
                   {resource.type === "file" ? (
-                    <Download className="w-6 h-6 text-violet-600" />
+                    <Download className="w-6 h-6 text-emerald-600" />
                   ) : resource.type === "link" ? (
-                    <ExternalLink className="w-6 h-6 text-violet-600" />
+                    <ExternalLink className="w-6 h-6 text-emerald-600" />
                   ) : (
-                    <FileText className="w-6 h-6 text-violet-600" />
+                    <FileText className="w-6 h-6 text-emerald-600" />
                   )}
                 </div>
               </div>
 
-              <p className="text-sm text-violet-700/75 leading-relaxed mb-5">
+              <p className="text-sm text-emerald-700/75 leading-relaxed mb-5">
                 {resource.description}
               </p>
 
@@ -149,7 +149,7 @@ export default function ResourcesClient() {
                   {resource.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs border border-violet-100"
+                      className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs border border-emerald-100"
                     >
                       {tag}
                     </span>
@@ -158,7 +158,7 @@ export default function ResourcesClient() {
               )}
 
               {resource.submittedBy && (
-                <p className="text-xs text-violet-500 mb-5">
+                <p className="text-xs text-emerald-500 mb-5">
                   Submitted by {resource.submittedBy}
                 </p>
               )}
@@ -168,7 +168,7 @@ export default function ResourcesClient() {
                   href={resource.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-violet-600 text-white text-sm font-semibold hover:bg-violet-700 transition"
+                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700 transition"
                 >
                   <ExternalLink className="w-4 h-4" />
                   Open Resource
@@ -190,16 +190,16 @@ export default function ResourcesClient() {
           ))}
         </div>
       ) : (
-        <div className="text-center py-16 bg-white border border-violet-100 rounded-3xl">
-          <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-violet-100 flex items-center justify-center">
-            <Search className="w-8 h-8 text-violet-500" />
+        <div className="text-center py-16 bg-white border border-emerald-100 rounded-3xl">
+          <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-emerald-100 flex items-center justify-center">
+            <Search className="w-8 h-8 text-emerald-500" />
           </div>
 
-          <h3 className="text-2xl font-serif font-bold text-indigo-950 mb-3">
+          <h3 className="text-2xl font-serif font-bold text-stone-950 mb-3">
             No resources found
           </h3>
 
-          <p className="text-violet-700/70 max-w-md mx-auto mb-6">
+          <p className="text-emerald-700/70 max-w-md mx-auto mb-6">
             Try another search term or category. You can also submit a helpful
             resource through GitHub.
           </p>
@@ -207,7 +207,7 @@ export default function ResourcesClient() {
           <button
             type="button"
             onClick={clearFilters}
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-violet-600 text-white font-semibold hover:bg-violet-700 transition"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition"
           >
             Reset Filters
           </button>

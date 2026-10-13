@@ -102,15 +102,15 @@ export default function ContributePage() {
             <p className="text-orange-500 uppercase tracking-widest text-sm font-semibold mb-3">
               For Developers
             </p>
-            <h2 className="text-4xl font-serif font-bold text-indigo-950">
+            <h2 className="text-4xl font-serif font-bold text-stone-950">
               How to Contribute Code
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <ol className="space-y-5 text-violet-700/80 leading-relaxed">
+            <ol className="space-y-5 text-emerald-700/80 leading-relaxed">
               <li className="flex gap-4">
-                <span className="w-8 h-8 shrink-0 rounded-full bg-violet-100 text-violet-700 flex items-center justify-center font-bold text-sm">
+                <span className="w-8 h-8 shrink-0 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
                   1
                 </span>
                 <span>
@@ -119,7 +119,7 @@ export default function ContributePage() {
               </li>
 
               <li className="flex gap-4">
-                <span className="w-8 h-8 shrink-0 rounded-full bg-violet-100 text-violet-700 flex items-center justify-center font-bold text-sm">
+                <span className="w-8 h-8 shrink-0 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
                   2
                 </span>
                 <span>
@@ -128,7 +128,7 @@ export default function ContributePage() {
               </li>
 
               <li className="flex gap-4">
-                <span className="w-8 h-8 shrink-0 rounded-full bg-violet-100 text-violet-700 flex items-center justify-center font-bold text-sm">
+                <span className="w-8 h-8 shrink-0 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
                   3
                 </span>
                 <span>
@@ -137,7 +137,7 @@ export default function ContributePage() {
               </li>
 
               <li className="flex gap-4">
-                <span className="w-8 h-8 shrink-0 rounded-full bg-violet-100 text-violet-700 flex items-center justify-center font-bold text-sm">
+                <span className="w-8 h-8 shrink-0 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
                   4
                 </span>
                 <span>
@@ -146,7 +146,7 @@ export default function ContributePage() {
               </li>
 
               <li className="flex gap-4">
-                <span className="w-8 h-8 shrink-0 rounded-full bg-violet-100 text-violet-700 flex items-center justify-center font-bold text-sm">
+                <span className="w-8 h-8 shrink-0 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
                   5
                 </span>
                 <span>
@@ -155,12 +155,12 @@ export default function ContributePage() {
               </li>
             </ol>
 
-            <div className="bg-gradient-to-br from-violet-600 to-indigo-900 text-white rounded-3xl p-8 shadow-xl shadow-violet-300/30">
+            <div className="bg-gradient-to-br from-emerald-600 to-stone-900 text-white rounded-3xl p-8 shadow-xl shadow-emerald-300/30">
               <h3 className="text-2xl font-serif font-bold mb-5">
                 Good First Contributions
               </h3>
 
-              <ul className="space-y-4 text-violet-100/85">
+              <ul className="space-y-4 text-emerald-100/85">
                 <li>Improve the README file.</li>
                 <li>Fix spelling mistakes in pages.</li>
                 <li>Add a new resource card.</li>
@@ -175,12 +175,12 @@ export default function ContributePage() {
       </section>
 
       <section className="px-6 py-20">
-        <div className="max-w-4xl mx-auto text-center bg-white border border-violet-100 rounded-3xl p-10 shadow-sm">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-indigo-950 mb-5">
+        <div className="max-w-4xl mx-auto text-center bg-white border border-emerald-100 rounded-3xl p-10 shadow-sm">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-950 mb-5">
             Ready to Join?
           </h2>
 
-          <p className="text-violet-700/75 leading-relaxed mb-8">
+          <p className="text-emerald-700/75 leading-relaxed mb-8">
             Start by visiting the GitHub repository, reading the contributing
             guide, and picking one small task. Open source grows best when
             people take one practical step at a time.
@@ -191,7 +191,7 @@ export default function ContributePage() {
               href={repoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-violet-600 text-white font-semibold hover:bg-violet-700 transition"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition"
             >
               <ExternalLink className="w-4 h-4" />
               View GitHub Repository
